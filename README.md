@@ -8,4 +8,7 @@ Folder shiny-application contais sources for Shiny Application. Main idea of thi
 
 ## Reproducible Pitch
 
-Folder https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
+Folder 
+
+Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/ reproducible-pitch-presentation contais sources for Reproducible Pitch that describes Fake Contacts Generator application. URL to check presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
+
