@@ -8,7 +8,7 @@ Folder shiny-application contais sources for Shiny Application. Main idea of thi
 
 ## Reproducible Pitch
 
-Folder 
+Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/ reproducible-pitch-presentation contais sources for Reproducible Pitch that describes the mtcar explorer Application. 
 
-Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/ reproducible-pitch-presentation contais sources for Reproducible Pitch that describes Fake Contacts Generator application. URL to check presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
+URL to check presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
 
