@@ -4,11 +4,11 @@ This project has two parts. First, this is a Shiny application, that also deploe
 
 ## Shiny Application
 
-Folder shiny-application contais sources for Shiny Application. Main idea of this application is to create Fake Contacts Generator that could help into some apllication testing. URL to check application
+Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/ contais sources for Shiny Application. Main idea of this application is to create Fake Contacts Generator that could help into some apllication testing. URL to check application
 
 ## Reproducible Pitch
 
-Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/ reproducible-pitch-presentation contais sources for Reproducible Pitch that describes the mtcar explorer Application. 
+reproducible-pitch-presentation contais sources for Reproducible Pitch that describes the mtcar explorer Application. 
 
 URL to check presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
 
