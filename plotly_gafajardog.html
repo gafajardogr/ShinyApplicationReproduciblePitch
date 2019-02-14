@@ -29,17 +29,38 @@ German Fajardo G
 </div>
 <div id="shiny-application-data-mtcars" class="slide section level2">
 <h2>Shiny Application (Data mtcars)</h2>
-<p>This document focuses on the analysis of the R dataset mtcars.</p>
-<p>The objective of the application is to make an explorer of the data to mtcar present in RStudio</p>
+<p>This document focuses on the analysis of the R dataset mtcars. The objective of the application is to make an explorer of the data to mtcar present in RStudio</p>
 <ol style="list-style-type: decimal">
 <li>Choose the variable of the following: ‘Cylinders’ = ‘cyl’, ‘Miles / gallon’ = ‘mpg’, ‘Displacement’ = ‘disp’, ‘Quarter miles / sec’ = ‘qsec’, ‘Gross horsepower’ = ‘hp’, ‘Weight (lb / 1000)’ = ‘wt’</li>
 <li>Select ‘How do you want to check the points?’ Plots or Tests</li>
 <li>If you select ‘Plots’, you can paint Histogram, Boxplot, QQ plot 4 If you select Tests the program will show Shapiro-Wilk Test to check normality. The Shapiro-Wilk test is a statistical test used to test the normality of a data set. Published in 1965 by Samuel Shapiro and Martin Wilk.</li>
 </ol>
 </div>
-<div id="references" class="slide section level2">
-<h2>References</h2>
-<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html" class="uri">https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html</a></p>
+<div id="shiny-application" class="slide section level2">
+<h2>Shiny Application</h2>
+<p>The presentation explaining the application and code can be seen Folder: <a href="https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/" class="uri">https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/</a></p>
+<p>he final result can be seen Presentation: <a href="https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/" class="uri">https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/</a></p>
+</div>
+<div id="references-and-core-code" class="slide section level2">
+<h2>References and core code</h2>
+<h3 id="core-code">core code</h3>
+<pre><code>    output$myplot =  renderPlot({
+        if (input$plotchoice == &quot;Histogram&quot;)
+            return(hist(var(), main = &quot;Histogram&quot;, xlab = input$varchoice))
+        if (input$plotchoice == &quot;Boxplot&quot;)
+            return (boxplot(var(), main=&quot;Boxplot&quot;, xlab = input$varchoice))
+        if (input$plotchoice == &quot;QQ-Plot&quot;)
+            return(qqnorm(var(), main = paste(&quot;QQ plot of&quot;, input$varchoice)))
+    })
+    output$mytest = renderPrint({
+        shapiro.test(var())
+    })</code></pre>
+<h3 id="references">References</h3>
+<ol style="list-style-type: decimal">
+<li><a href="https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html" class="uri">https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html</a></li>
+<li><a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html" class="uri">https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html</a></li>
+<li><a href="https://stackoverflow.com/questions/52611963/shiny-r-histogram" class="uri">https://stackoverflow.com/questions/52611963/shiny-r-histogram</a></li>
+</ol>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->

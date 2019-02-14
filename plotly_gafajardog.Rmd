@@ -11,7 +11,6 @@ output:
 
 ---
 
-
 ## Instructions
 
 This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
@@ -34,7 +33,6 @@ The Shiny application in question is entirely up to you. However, if you're havi
 ## Shiny Application (Data mtcars)
 
 This document focuses on the analysis of the R dataset mtcars.
-
 The objective of the application is to make an explorer of the data to mtcar present in RStudio
 
 1. Choose the variable of the following:
@@ -51,8 +49,35 @@ The objective of the application is to make an explorer of the data to mtcar pre
 4 If you select Tests the program will show Shapiro-Wilk Test to check normality.
     The Shapiro-Wilk test is a statistical test used to test the normality of a data set. Published in 1965 by Samuel Shapiro and Martin Wilk.
 
-## References
-https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html
+## Shiny Application
+
+The presentation explaining the application and code can be seen
+Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/
+
+he final result can be seen 
+Presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
+
+## References and core code
+
+### core code
+```
+    output$myplot =  renderPlot({
+        if (input$plotchoice == "Histogram")
+            return(hist(var(), main = "Histogram", xlab = input$varchoice))
+        if (input$plotchoice == "Boxplot")
+            return (boxplot(var(), main="Boxplot", xlab = input$varchoice))
+        if (input$plotchoice == "QQ-Plot")
+            return(qqnorm(var(), main = paste("QQ plot of", input$varchoice)))
+    })
+    output$mytest = renderPrint({
+        shapiro.test(var())
+    })
+```
+###References
+
+1. https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html
+2. https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
+3. https://stackoverflow.com/questions/52611963/shiny-r-histogram
 
 
 

@@ -27,6 +27,11 @@ ui =  fluidPage(titlePanel("Exploring the mtcars dataset"),
                         )
                     ),
                     mainPanel(
+                        h3("Instructions"),
+                        h5("1. Choose the variable"),
+                        h5("2. Select 'How do you want to check the points?"),
+                        h5("3. If you select 'Plots', you can paint"),
+                        h5("4 If you select Tests the program will show Shapiro-Wilk Test to check normality"),
                         conditionalPanel("input.normchoice == 'Plots'", plotOutput("myplot")),
                         conditionalPanel("input.normchoice == 'Tests'", verbatimTextOutput("mytest"))
                     )
