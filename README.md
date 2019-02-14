@@ -13,4 +13,3 @@ Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/ contai
 reproducible-pitch-presentation contais sources for Reproducible Pitch that describes the mtcar explorer Application. 
 
 URL to check presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
-

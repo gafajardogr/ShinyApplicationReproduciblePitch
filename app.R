@@ -4,7 +4,7 @@ ui =  fluidPage(titlePanel("Exploring the mtcars dataset"),
                     sidebarPanel(
                         selectInput(
                             "varchoice",
-                            "Choose the variable for which you want to check the normality",
+                            "Choose the variable for which you want to check",
                             choices = c('Cylinders' = 'cyl',
                                         'Miles/gallon'= 'mpg', 
                                         'Displacement'= 'disp', 
@@ -13,7 +13,7 @@ ui =  fluidPage(titlePanel("Exploring the mtcars dataset"),
                         ),
                         radioButtons(
                             "normchoice",
-                            "How do you want to check the normality?",
+                            "How do you want to check the points?",
                             choices = c("Plots", "Tests"),
                             selected = "Plots"
                         ),
@@ -28,7 +28,6 @@ ui =  fluidPage(titlePanel("Exploring the mtcars dataset"),
                     ),
                     mainPanel(
                         conditionalPanel("input.normchoice == 'Plots'", plotOutput("myplot")),
-                        conditionalPanel("input.normchoice == 'Boxplot'", plotOutput("Boxplot")),
                         conditionalPanel("input.normchoice == 'Tests'", verbatimTextOutput("mytest"))
                     )
                 ))
@@ -43,7 +42,7 @@ server = function(input, output) {
             return(hist(var(), main = "Histogram", xlab = input$varchoice))
         if (input$plotchoice == "Boxplot")
             return (boxplot(var(), main="Boxplot", xlab = input$varchoice))
-        if (input$plotchoice == "Tests")
+        if (input$plotchoice == "QQ-Plot")
             return(qqnorm(var(), main = paste("QQ plot of", input$varchoice)))
     })
     output$mytest = renderPrint({

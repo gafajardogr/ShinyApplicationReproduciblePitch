@@ -2,9 +2,13 @@
 title: "Course Project: Shiny Application and Reproducible Pitch"
 author: "German Fajardo G"
 date: "11 Feb 2019"
+Folder: https://github.com/gafajardogr/ShinyApplicationReproduciblePitch/
+URL to check presentation: https://gafajardog.shinyapps.io/ShinyApplicationReproduciblePitch/
 output:
   slidy_presentation: default
   ioslides_presentation: default
+  
+
 ---
 
 
@@ -30,14 +34,22 @@ The Shiny application in question is entirely up to you. However, if you're havi
 ## Shiny Application (Data mtcars)
 
 This document focuses on the analysis of the R dataset mtcars.
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
 
-    
+The objective of the application is to make an explorer of the data to mtcar present in RStudio
 
-
-https://edocastrom.shinyapps.io/BodyMassIndex/
-
-
+1. Choose the variable of the following:
+    'Cylinders' = 'cyl',
+    'Miles / gallon' = 'mpg',
+    'Displacement' = 'disp',
+    'Quarter miles / sec' = 'qsec',
+    'Gross horsepower' = 'hp',
+    'Weight (lb / 1000)' = 'wt'
+2. Select 'How do you want to check the points?'
+    Plots or Tests
+3. If you select 'Plots', you can paint
+    Histogram, Boxplot, QQ plot
+4 If you select Tests the program will show Shapiro-Wilk Test to check normality.
+    The Shapiro-Wilk test is a statistical test used to test the normality of a data set. Published in 1965 by Samuel Shapiro and Martin Wilk.
 
 ## References
 https://rstudio-pubs-static.s3.amazonaws.com/45786_b5e54c2d3c824f51abd2d559506cf81f.html
